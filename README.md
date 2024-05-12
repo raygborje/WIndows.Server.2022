@@ -2,8 +2,8 @@
 
 <h2>Table of Contents</h2>
 1. <a href="https://github.com/raygborje/Windows.Server.2022/blob/main/README.md#description"> Description </a> <br />
-2. <a href="https://github.com/raygborje/Windows.Server.2022/blob/main/README.md#Minimum_Hardware_Requirements"> Minimum Hardware Requirements </a> <br />
-3. <a href="https://github.com/raygborje/Windows.Server.2022/blob/main/README.md#Preparing_a_Bootable_USB_Drive_using_Rufus"> Preparing a Bootable USB Drive using Rufus </a> <br />
+2. <a href="https://github.com/raygborje/Windows.Server.2022/blob/main/README.md#minimum-hardware-requirements"> Minimum Hardware Requirements </a> <br />
+3. <a href="https://github.com/raygborje/Windows.Server.2022/blob/main/README.md#preparing-a-bootable-usb-drive-using-rufus"> Preparing a Bootable USB Drive using Rufus </a> <br />
 
 <h2>Description</h2>
 Embarking on the journey toward becoming a proficient Azure Administrator and aspiring Cyber Security Professional necessitates hands-on experience in crafting resilient infrastructures from the ground up. Establishing an Active Directory (AD) environment with Windows Server 2022 within a home lab serves as an invaluable stepping stone, providing a practical playground for honing skills, experimenting with configurations, and deepening understanding of core concepts.
