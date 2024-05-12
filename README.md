@@ -4,39 +4,36 @@
 1. <a href="https://github.com/raygborje/Windows.Server.2022/blob/main/README.md#description"> Description </a> <br />
 
 <h2>Description</h2>
-The Cyber Security Project involves the initial setup and troubleshooting of a Kali Linux virtual machine (VM) using Oracle VM VirtualBox. Kali Linux is a popular Linux distribution widely used for penetration testing, ethical hacking, and security auditing.
+Embarking on the journey toward becoming a proficient Azure Administrator and aspiring Cyber Security Professional necessitates hands-on experience in crafting resilient infrastructures from the ground up. Establishing an Active Directory (AD) environment with Windows Server 2022 within a home lab serves as an invaluable stepping stone, providing a practical playground for honing skills, experimenting with configurations, and deepening understanding of core concepts.
 
-The project aims to provide a secure and isolated environment for conducting various security-related activities, such as vulnerability scanning, network analysis, and penetration testing. By setting up a Kali Linux VM, participants can gain hands-on experience with tools and techniques commonly employed by cybersecurity professionals.
+The process commences with the procurement of hardware resources conducive to hosting virtualized environments. Leveraging virtualization platforms such as Hyper-V or VMware, a Windows Server 2022 instance is provisioned, serving as the cornerstone of the AD deployment. This exercise not only familiarizes oneself with server deployment procedures but also instills proficiency in managing virtualized environments—an essential skill set in contemporary IT landscapes.
+
+With the server infrastructure in place, the installation and configuration of Windows Server 2022 are meticulously undertaken, following prescribed installation procedures and adhering to security best practices. This foundational step lays the groundwork for hosting Active Directory Domain Services (AD DS) roles, pivotal in facilitating centralized identity and access management within the lab environment.
+
+Guided by a zeal for learning and a thirst for knowledge, the aspiring Cyber Security Professional delves into the intricacies of AD DS configuration, meticulously crafting domain structures, organizational units (OUs), and user accounts reflective of real-world scenarios. This hands-on experience not only solidifies comprehension of AD fundamentals but also cultivates problem-solving skills essential in addressing diverse challenges encountered in cyber security landscapes.
+
+Furthermore, the integration of additional Windows Server roles and features, such as DNS and DHCP services, further enriches the lab environment, mirroring the complexities of enterprise-grade infrastructures. This holistic approach to infrastructure deployment fosters a comprehensive understanding of interdependencies and the interconnected nature of IT systems—a cornerstone of effective cyber security strategies.
+
+As the lab environment matures, the aspiring professional explores advanced AD functionalities, such as Group Policy Objects (GPOs), fine-tuning security policies, and implementing access controls. Moreover, the integration with cloud services, including Azure Active Directory (Azure AD), offers a glimpse into hybrid cloud architectures, preparing individuals for the evolving paradigms of modern IT environments.
+
+Throughout this journey, the home lab serves as a crucible for experimentation, innovation, and growth—a safe haven where mistakes are valued as opportunities for learning, and triumphs serve as catalysts for advancement. Armed with newfound knowledge and practical experience, the aspiring Cyber Security Professional emerges equipped with the skills and confidence to navigate the complexities of cyber security landscapes with poise and proficiency.
 
 The project involves the following steps:
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Installation of Oracle VM VirtualBox: Participants install the Oracle VM VirtualBox software on their host machine, ensuring compatibility with their operating system. This step may require system configuration adjustments to enable virtualization.
-
-Obtaining Kali Linux: Participants download the Kali Linux ISO image from the official website. The ISO file contains the complete operating system and tools necessary for conducting security assessments.
-
-Creating a Kali Linux VM: Using Oracle VM VirtualBox, participants create a new virtual machine and configure its settings. This includes allocating system resources such as CPU, RAM, and storage for optimal performance.
-
-Installing Kali Linux: Participants mount the Kali Linux ISO image in the virtual machine and proceed with the installation. They follow the installation wizard to set up the operating system, create user accounts, and configure network settings.
-
-Post-installation setup: After installing Kali Linux, participants update the system packages and repositories to ensure they have the latest versions of security tools. They may also customize the VM settings, install additional packages, or configure network adapters based on their project requirements.
-
-Troubleshooting and Issue Resolution: Participants troubleshoot common issues that may arise during the setup process. This includes addressing network connectivity problems, resolving hardware conflicts, or resolving compatibility issues between the host machine and the virtual environment.
+- Install Active Directory Domain Services (AD DS) on the designated server.
+- Promote the server to a domain controller by running the Active Directory Domain Services Configuration Wizard.
+- Configure the domain name and forest settings.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Throughout the project, participants gain practical knowledge of virtualization technologies, operating system installation and configuration, and troubleshooting techniques. They also become familiar with the Kali Linux ecosystem and its wide range of cybersecurity tools.
-
-By successfully setting up and troubleshooting the Kali Linux VM, participants lay the foundation for performing various cybersecurity tasks within a secure and controlled environment. This project serves as an essential step towards developing practical skills in the field of cyber security and ethical hacking.
-<br />
-
 <h3>Minimum Hardware Requirements</h3>
 
-- <b>Processor: A dual-core processor or higher is recommended. However, a single-core processor can suffice for basic usage.</b> 
-- <b>RAM: At least 2 GB of RAM is required for running Kali Linux smoothly. However, it is recommended to have 4 GB or more for better performance, especially when running resource-intensive security tools.</b>
-- <b>Storage: A minimum of 20 GB of free disk space is required to install Kali Linux. However, it is advisable to allocate more space (at least 40 GB or higher) to accommodate additional software packages, tools, and data.</b>
-- <b>Graphics: Any graphics card that supports the host operating system is sufficient for running Kali Linux in a virtual machine.</b>
+- <b>Processor: It is recommened to have at least 1 64bit Processor with 1.4 GHz that is Hyper -V Compatible (Intel VT or AMD -V). 64 Processors is the maximum effective limit.</b> 
+- <b>RAM: At least 512 MB of RAM is required to host a Windows Server 2022. 4 TB RAM would be the maximum effective limit.</b>
+- <b>Storage: A minimum of 10 GB of free disk space is required to install Windows Server 2022. However, it is advisable to allocate more space (at least 80 GB or higher) to accommodate additional software packages, tools, and data.</b>
+- <b>Graphics: Any graphics card that supports the host operating system is sufficient for running Windows Server 2022.</b>
 - <b>Network: A network interface card (NIC) is required for network connectivity within the Kali Linux VM. Oracle VM VirtualBox allows you to configure network adapters, including NAT, Bridged, or Host-only networking, based on your requirements.</b>
 - <b>Host Machine: The host machine should meet the minimum requirements for running Oracle VM VirtualBox itself. Refer to the VirtualBox documentation for specific details regarding the host machine's operating system, processor, RAM, and storage requirements.</b>
 
