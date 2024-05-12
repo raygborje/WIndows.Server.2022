@@ -4,7 +4,7 @@
 1. <a href="https://github.com/raygborje/Windows.Server.2022/blob/main/README.md#description"> Description </a> <br />
 
 <h2>Description</h2>
-Embarking on the journey toward becoming a proficient Azure Administrator and aspiring Cyber Security Professional necessitates hands-on experience in crafting resilient infrastructures from the ground up. Establishing an Active Directory (AD) environment with Windows Server 2022 within a home lab serves as an invaluable stepping stone, providing a practical playground for honing skills, experimenting with configurations, and deepening understanding of core concepts.
+Embarking on the journey toward becoming a proficient Azure Administrator and aspiring Cyber Security Professional necessitates hands-on experience in crafting resilient infrastructures from the ground up. Establishing an Active Directory (AD) environment with Windows Server 2022 within a home lab serves as an invaluable stepping stone, providing a practical playground for honing skills, experimenting with configurations, and deepening understanding of core concepts.<br />
 
 The process commences with the procurement of hardware resources conducive to hosting virtualized environments. Leveraging virtualization platforms such as Hyper-V or VMware, a Windows Server 2022 instance is provisioned, serving as the cornerstone of the AD deployment. This exercise not only familiarizes oneself with server deployment procedures but also instills proficiency in managing virtualized environments—an essential skill set in contemporary IT landscapes.
 
