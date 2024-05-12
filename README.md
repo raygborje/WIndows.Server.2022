@@ -2,9 +2,12 @@
 
 <h2>Table of Contents</h2>
 1. <a href="https://github.com/raygborje/Windows.Server.2022/blob/main/README.md#description"> Description </a> <br />
+2. <a href="https://github.com/raygborje/Windows.Server.2022/blob/main/README.md#Minimum_Hardware_Requirements"> Minimum Hardware Requirements </a> <br />
+3. <a href="https://github.com/raygborje/Windows.Server.2022/blob/main/README.md#Preparing_a_Bootable_USB_Drive_using_Rufus"> Preparing a Bootable USB Drive using Rufus </a> <br />
 
 <h2>Description</h2>
-Embarking on the journey toward becoming a proficient Azure Administrator and aspiring Cyber Security Professional necessitates hands-on experience in crafting resilient infrastructures from the ground up. Establishing an Active Directory (AD) environment with Windows Server 2022 within a home lab serves as an invaluable stepping stone, providing a practical playground for honing skills, experimenting with configurations, and deepening understanding of core concepts.<br />
+Embarking on the journey toward becoming a proficient Azure Administrator and aspiring Cyber Security Professional necessitates hands-on experience in crafting resilient infrastructures from the ground up. Establishing an Active Directory (AD) environment with Windows Server 2022 within a home lab serves as an invaluable stepping stone, providing a practical playground for honing skills, experimenting with configurations, and deepening understanding of core concepts.
+<br /> <br />
 
 The process commences with the procurement of hardware resources conducive to hosting virtualized environments. Leveraging virtualization platforms such as Hyper-V or VMware, a Windows Server 2022 instance is provisioned, serving as the cornerstone of the AD deployment. This exercise not only familiarizes oneself with server deployment procedures but also instills proficiency in managing virtualized environments—an essential skill set in contemporary IT landscapes.
 
@@ -22,6 +25,8 @@ The project involves the following steps:
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+- Preparing a Bootable USB Drive using Rufus. 
+- Install Windows Server on at least one machine to act as the domain controller for Active Directory.
 - Install Active Directory Domain Services (AD DS) on the designated server.
 - Promote the server to a domain controller by running the Active Directory Domain Services Configuration Wizard.
 - Configure the domain name and forest settings.
@@ -30,88 +35,50 @@ The project involves the following steps:
 
 <h3>Minimum Hardware Requirements</h3>
 
+- <b>USB Drive: A minimum of 10 GB will be needed to store Windows Server 2022. </b>
 - <b>Processor: It is recommened to have at least 1 64bit Processor with 1.4 GHz that is Hyper -V Compatible (Intel VT or AMD -V). 64 Processors is the maximum effective limit.</b> 
 - <b>RAM: At least 512 MB of RAM is required to host a Windows Server 2022. 4 TB RAM would be the maximum effective limit.</b>
-- <b>Storage: A minimum of 10 GB of free disk space is required to install Windows Server 2022. However, it is advisable to allocate more space (at least 80 GB or higher) to accommodate additional software packages, tools, and data.</b>
+- <b>Storage: A minimum of 32 GB of free disk space is required to install Windows Server 2022. However, it is advisable to allocate more space (at least 80 GB or higher) to accommodate additional software packages, tools, and data.</b>
 - <b>Graphics: Any graphics card that supports the host operating system is sufficient for running Windows Server 2022.</b>
-- <b>Network: A network interface card (NIC) is required for network connectivity within the Kali Linux VM. Oracle VM VirtualBox allows you to configure network adapters, including NAT, Bridged, or Host-only networking, based on your requirements.</b>
-- <b>Host Machine: The host machine should meet the minimum requirements for running Oracle VM VirtualBox itself. Refer to the VirtualBox documentation for specific details regarding the host machine's operating system, processor, RAM, and storage requirements.</b>
+- <b>Network: A network adapter capable of at least 1 Gbps throughput.</b>
 
 <i>It is important to note that the above specifications represent the minimum requirements, and for a better experience, it is recommended to have higher specifications, especially when working with resource-intensive tasks or running multiple virtual machines simultaneously. </i>
 
 <h3>Languages and Utilities Used</h3>
 
-- <b>VirtualBox 7.0.8 Platform Packages</b> (Windows hosts)
-- <b>VirtualBox 7.0.8 Oracle VM VirtualBox Extension Pack</b> (All supported platforms)
-- <b>Kali Linux - Installer Images</b> (64-bit Installer)
-- <b>Bash</b>
+- <b>Rufus 4.4</b> (Windows hosts)
+- <b>Windows Command Line</b> (Windows hosts)
+- <b>Powershell</b> (Windows hosts)
 - <b>BIOS</b>
 
 <h3>Environments Used </h3>
 
-- <b>Windows 10</b> (22H2 / OS Build 19045.2965)
-- <b>Kali Linux</b> (2023.2)
+- <b>Windows Server 2022</b>
+- <b>Windows 11</b>
 
 
-<h2>VirtualBox Install Walk-Through:</h2>
+<h2>Preparing a Bootable USB Drive using Rufus:</h2>
+Download Windows Server 2022 ISO <a href=https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022>here</a><br />
+Download Rufus <a href= https://rufus.ie/en/>here</a>
 
-<p align="center">
- <i>If you already have VirtualBox installed, please skip ahead to <a href="https://github.com/raygborje/Kali.Linux.VM/blob/main/README.md#kali-linux-install-walk-through"> Kali Linux Install </a>. </i> <br />
- <i>Back to <a href="https://github.com/raygborje/Kali.Linux.VM/blob/main/README.md#kali-linux---initial-setup--troubleshooting-guide-windows-10"> main </a></i> <br />
- <br />
- <br />
- Go to <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>.<br /> 
- Download <b>VirtualBox 7.0.8 Platform Packages</b> (Windows hosts) and <b>VirtualBox 7.0.8 Oracle VM VirtualBox Extension Pack</b> (All supported platforms).
-<br/>
-<img src="https://i.imgur.com/YIHswd0.png" height="60%" width="60%" alt="VirtualBox Install Steps"/>
-<br />
-<br />
- Go to Downloads Folder. Run <b>VirtualBox-7.0.8-156879-Win.exe.</b><br/>
-<img src="https://i.imgur.com/0PTxQKW.png" height="60%" width="60%" alt="VirtualBox Install Steps"/>
-<br />
-<br />
- In the <b>Oracle VM VirtualBox Setup Wizard</b>, Click <b>Next</b>.<br/>
-<img src="https://i.imgur.com/o4EZXBL.png" height="60%" width="60%" alt="VirtualBox Install Steps"/>
-<br />
-<br />
- For the <b>Custom Setup</b>, leave Location as <b>C:\ProgramFiles\Oracle\VirtualBox\</b> and press <b>Next</b>.<br/>
-<img src="https://i.imgur.com/tJ4t5U3.png" height="60%" width="60%" alt="VirtualBox Install Steps"/>
-<br />
-<br />
- Proceed with the installation by pressing <b>Next</b>.<br/>
- <i>Warning: You will be disconnected from your Network during a brief portion of this installation. </i><br />
- <i>Warning: If you are Missing Dependencies Python Core / win32api, refer to the <a href="https://github.com/raygborje/Kali.Linux.VM/blob/main/README.md#missing-dependencies-python-core--win32api">Troubleshooting Section</a>.</i><br />
- <img src="https://i.imgur.com/2y8DnD4.png" height="60%" width="60%" alt="VirtualBox Install Steps"/>
-<br />
-<br />
- At the <b>Ready to Install</b> window, press <b>Install</b>, allow the install, and let the installation complete.<br />
- <i>You may receive a prompt for a network/usb adapter during this process. Make sure to press Yes when this occurs.</i><br />
- <img src="https://i.imgur.com/QVwKIkv.png" height="60%" width="60%" alt="VirtualBox Install Steps"/>
-<br />
-<br />
- Once the installation is complete, leave the checkmark as checked and press <b>Finish</b>.<br />
- <img src="https://i.imgur.com/iC60Y7u.png" height="60%" width="60%" alt="VirtualBox Install Steps"/>
-<br />
-<br />
- Now, we will be installing the extension pack we downloaded earlier onto <b>VirtualBox</b>.<br />
- In <b>Oracle VM VirtualBox Manager</b>, go to <b>Tools</b>, click on the blue squares, and select the <b>Extensions</b> tab. <br />
- <img src="https://i.imgur.com/A3e0HW6.png" height="60%" width="60%" alt="VirtualBox Install Steps"/>
-<br />
-<br />
- Click on <b>Install</b> and select the <b>Oracle_VM_VirtualBox_Extension_Pack-7.0.8.vbox-extpack</b> file. Press <b>Open</b>.<br />
- <img src="https://i.imgur.com/8rDPIwY.png" height="60%" width="60%" alt="VirtualBox Install Steps"/>
-<br />
-<br />
- Click on <b>Install</b>, scroll down to the <b>VirtualBox License</b>, press <b>I Agree</b>.<br />
- <img src="https://i.imgur.com/JZLJbYX.png" height="60%" width="60%" alt="VirtualBox Install Steps"/><br />
- <img src="https://i.imgur.com/7SFC5FV.png" height="60%" width="60%" alt="VirtualBox Install Steps"/>
-<br />
-<br />
- The Extension Pack has been successfully installed and <b>Oracle VM VirtualBox</b> is ready for use.<br />
- <img src="https://i.imgur.com/bNKEvgE.png" height="60%" width="60%" alt="VirtualBox Install Steps"/>
-<br />
-<br />
-</p>
+Have the Bootable USB Device plugged in. <br /><br />
+	1. Launch Rufus from .exe file <br />
+	2. Select the bootable USB Drive as the Device. <br />
+	3. Under "Boot Selection", press "Select" and select the Windows Server 2022 ISO. <br />
+	4. Leave the default settings that are pre-selected by Rufus. <br />
+	5. Under "Volume Label", you can place a custom name for the Bootable USB Drive. Press Start. <br />
+	6. Leave the selected settings and press OK. **WARNING**Data remaining on the USB will be destroyed at this point. <br />
+	7. Wait for Status to read as READY. You should see the following files/folders in the Bootable USB Device. <br />
+	&emsp;a. Boot (Folder)<br />
+	&emsp;b. Efi (Folder)<br />
+	&emsp;c. Sources (Folder)<br />
+	&emsp;d. Support (Folder)<br />
+	&emsp;e. Autorun.inf (File)<br />
+	&emsp;f. Bootmgr (File)<br />
+	&emsp;g. Bootmgr.efi (File)<br />
+	&emsp;h. Setup.exe (File)<br />
+	8. Afterwards, safely eject the Bootable USB Device.<br />
+
 
 <h2>Kali Linux Install Walk-Through:</h2>
 
